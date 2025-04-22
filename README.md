@@ -36,7 +36,8 @@ netflix-analysis/
 │   └── mysql_config.py                # MySQL connection settings
 │
 ├── README.md
-├── requirements.txt (optional)
+├── requirements.txt
+├── .gitignore
 ```
 
 ---
@@ -57,6 +58,40 @@ netflix-analysis/
    - `02_clean_and_format.py`
    - `load_to_mysql.py`
    - Use Looker Studio with MySQL connection for visuals
+
+---
+
+## 🔧 Development Environment / 開發環境
+```
+OS         : macOS 14.4 (Sonoma)
+Python     : 3.11 (Anaconda)
+IDE        : PyCharm Professional
+Database   : MySQL 8.0 (local via Terminal)
+BI Tool    : Google Looker Studio (Cloud-based)
+```
+
+## 📦 Main Dependencies / 套件依賴
+```
+pandas >= 2.0.0
+plotly >= 5.0.0
+mysql-connector-python >= 8.0.0
+notebook >= 7.0.0
+```
+
+## ▶️ How to Run / 執行方式
+```
+# 安裝所有必要套件
+pip install -r requirements.txt
+
+# 匯入資料至資料庫（確保 MySQL 已啟動）
+python notebooks/load_to_mysql.py
+
+# 執行探索性資料分析（從 MySQL 撈資料）
+python notebooks/04_sql_analysis.py
+
+# 查看 Looker Studio 報表
+👉 https://lookerstudio.google.com/s/vABoS93hhe0
+```
 
 ---
 
