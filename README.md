@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="cover.png" alt="Netflix Project Cover" width="80%">
+  <img src="xcover.png" alt="Netflix Project Cover" width="80%">
 </p>
 
 
