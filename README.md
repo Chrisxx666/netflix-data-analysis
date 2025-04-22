@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="cover.png" alt="Netflix Project Cover" width="80%">
+</p>
+
+
+
 # Netflix Data Analysis Project
 
 📊 **Interactive Dashboard**: [View on Looker Studio](https://lookerstudio.google.com/s/vABoS93hhe0)
