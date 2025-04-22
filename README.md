@@ -1,7 +1,6 @@
-<img src="cover.png" alt="Netflix Project Cover" width="80%">
-
-
-
+<p align="center">
+  <img src="cover.png" alt="Netflix Project Cover" width="80%">
+</p>
 
 
 # Netflix Data Analysis Project
