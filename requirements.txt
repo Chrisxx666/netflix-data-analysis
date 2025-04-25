@@ -1,4 +1,9 @@
 pandas>=2.0.0
 plotly>=5.0.0
 mysql-connector-python>=8.0.0
+sqlalchemy>=2.0.0
+python-dotenv>=1.0.0
 notebook>=7.0.0
+kaleido>=0.2.1  # 用於保存 Plotly 圖表為靜態圖片
+flask>=2.0.0    # 用於本地託管網站（如需要）
+gunicorn>=20.1.0  # 用於部署（如需要）

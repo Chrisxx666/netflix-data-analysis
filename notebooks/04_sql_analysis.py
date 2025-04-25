@@ -1,6 +1,8 @@
 import pandas as pd
 import plotly.express as px
-from sqlalchemy import create_engine
+from utils import connect_to_db  # 引入我們的新函數
+
+# 優化後：避免在多個檔案中重複寫連接資料庫的程式碼，當資料庫設定改變時只需修改一處。
 
 """
 This script connects to a MySQL database using SQLAlchemy,
@@ -9,8 +11,8 @@ and generates visual insights including yearly trends,
 content type distribution, ratings, and top countries.
 """
 
-# Step 1: Connect to MySQL using SQLAlchemy
-engine = create_engine("mysql+pymysql://root:mynewpass123@localhost/netflix_db?unix_socket=/tmp/mysql.sock")
+# Step 1: Connect to MySQL using our new function
+engine = connect_to_db()
 
 # Step 2: Read data from the MySQL table
 df = pd.read_sql("SELECT * FROM netflix_titles", con=engine)

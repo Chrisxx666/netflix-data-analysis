@@ -1,4 +1,7 @@
 import pandas as pd
+from utils import clean_dataframe  # 引入我們剛創建的函數
+
+# 將清洗邏輯獨立出來，日後可以在其他檔案中重複使用，不需要複製貼上程式碼。
 
 """
 這支程式是 Netflix 專案的第 2 階段，主要目的是對原始資料進行清洗與欄位格式轉換。
@@ -18,22 +21,9 @@ df = pd.read_csv('../data/netflix_titles.csv')
 
 print(df.isnull().sum())
 # Step1:check /w columns have missing value. Help us decide how to handle them
-# 載入資料集
 
-df['director'] = df['director'].fillna('Unknown')
-df['cast'] = df['cast'].fillna('Unknown')
-df['country'] = df['country'].fillna('Unknown')
-df['rating'] = df['rating'].fillna('Unknown')
-# Step2:fill missing values less critical columns 檢查缺失值
-# prevents errors or bias in future analysis
-
-df = df.dropna(subset=['title', 'date_added'])
-# Step3:drop rows /w missing values in key columns 填補次要欄位缺失值
-# We need title & date_added to be reliable
-
-df['date_added'] = pd.to_datetime(df['date_added'].str.strip())
-# Step4:convert 'date_added' to datetime format 刪除關鍵欄位的缺失值
-# useful for future time-based analysis
+# 使用新的函數進行清洗
+df = clean_dataframe(df)
 
 df.to_csv('../data/netflix_cleaned.csv', index=False)
 # Step5:optional - save cleaned dataset for future use 轉換日期格式
