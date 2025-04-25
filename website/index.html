@@ -40,14 +40,15 @@ cat > website/index.html << 'EOF'
         }
     </style>
     
-    <!-- Google Analytics Tag -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7PZ7ZEW0PX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-7PZ7ZEW0PX'); // Replace with your Google Analytics measurement ID
-    </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7PZ7ZEW0PX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7PZ7ZEW0PX');
+</script>
 </head>
 <body>
     <!-- Hero Section -->
